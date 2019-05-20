@@ -1,0 +1,13 @@
+<h1>Booking Show</h1>
+<ul>
+  <li>
+    <%= @booking.move_in_date %>|
+    <%= @booking.move_out_date %>|
+    <%= link_to "❌", root_path, method: :delete, data: { confirm: 'are you sure' } %>
+  </li>
+</ul>
+
+
+<div>
+    <%= link_to "back", root_path %>
+</div>
