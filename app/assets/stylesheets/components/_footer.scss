@@ -1,0 +1,26 @@
+.footer {
+  background-color: #EACDC2;
+}
+
+h4 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.icons-inline {
+  list-style: none;
+  margin: 0 15px;
+  padding: 0;
+}
+
+.icons-inline li {
+  color: #6C464E;
+  display: inline-block;
+  font-size: 30px;
+  margin: 10px 5px;
+  transition: font-size 0.5s;
+}
+
+.icons-inline li:hover {
+  font-size: 35px;
+}
