@@ -1,0 +1,16 @@
+<h1>Flats Show</h1>
+<ul>
+  <li>
+    <%= @flat.title %>|
+    <%= @flat.address %>|
+    <%= @flat.description %>|
+    <%= @flat.price_per_night %>|
+    <%= @flat.picture %>|
+    <%= link_to "❌", flat_path(@flat), method: :delete, data: { confirm: 'are you sure' } %>
+  </li>
+</ul>
+
+
+<div>
+    <%= link_to "back", root_path %>
+</div>
