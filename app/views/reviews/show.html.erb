@@ -1,0 +1,13 @@
+<h1>Review Show</h1>
+<ul>
+  <li>
+    <%= @review.description %>|
+    <%= @flat.stars %>|
+    <%= link_to "❌", root_path, method: :delete, data: { confirm: 'are you sure' } %>
+  </li>
+</ul>
+
+
+<div>
+    <%= link_to "back", root_path %>
+</div>
