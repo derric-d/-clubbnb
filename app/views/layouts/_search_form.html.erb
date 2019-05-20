@@ -1,9 +1,9 @@
 <% form_for @flat do |f| -%>
   <%= simple_form_for(@booking) do |r| %>
-  <%=  r.input :address %>
+  <%=  r.input :city %>
   <%=  r.input :move_in_at %>
   <%=  r.input :move_out_at %>
   <%=  r.input :guests %>
   <%=  r.submit "Search", class: "btn btn-primary" %>
   <% end %>
-<% end -%>
+<% end %>
