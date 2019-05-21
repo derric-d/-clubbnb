@@ -113,63 +113,63 @@ bookings_attributes = [
 {
   move_out_date: 20190802,
   move_in_date: 20190302,
-  status: 'requested',
+  status: 'requested by guest',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190702,
   move_in_date: 20190402,
-  status: 'confirmed',
+  status: 'confirmed by host',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190802,
   move_in_date: 20190502,
-  status: 'confirmed',
+  status: 'cancelled by guest',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190602,
   move_in_date: 20190507,
-  status: 'requested',
+  status: 'paid',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190602,
   move_in_date: 20190507,
-  status: 'requested',
+  status: 'cancelled by guest',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190502,
   move_in_date: 20190407,
-  status: 'confirmed',
+  status: 'denied by host',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190808,
   move_in_date: 20190709,
-  status: 'confirmed',
+  status: 'confirmed by host',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20191102,
   move_in_date: 20191007,
-  status: 'requested',
+  status: 'denied by host',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20191202,
   move_in_date: 20191107,
-  status: 'requested',
+  status: 'paid',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 }
