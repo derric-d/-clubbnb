@@ -1,7 +1,7 @@
 class Flat < ApplicationRecord
   belongs_to :user
   has_many :bookings
-
+  
   def all_reviews_for_flat
     self.bookings.map { |booking| booking.review }
   end
@@ -20,4 +20,8 @@ class Flat < ApplicationRecord
     reviews = all_reviews_for_flat
     reviews.count
   end
+
+  has_many :reviews, through: :bookings
+  mount_uploader :photo, PhotoUploader
+
 end

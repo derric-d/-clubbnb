@@ -56,7 +56,7 @@ flats_attributes = [
   address: 'Sophienstrasse 5',
   description: 'Super cozy and warm appartments with 100 sq including two bedrooms',
   price_per_night: 50,
-  picture: 'url',
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/148433/f402d00d_original.jpg?aki_policy=xx_large',
   user_id: User.all.sample.id
 },
 {
@@ -65,7 +65,7 @@ flats_attributes = [
   address: 'Tower Bridge 5',
   description: 'Two bedrooms and a huge kitchen - perfect for food lovers',
   price_per_night: 80,
-  picture: 'url',
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/67198954/bf349b76_original.jpg?aki_policy=xx_large',
   user_id: User.all.sample.id
 },
 {
@@ -74,7 +74,7 @@ flats_attributes = [
   address: 'Hollywood Hills 9862',
   description: 'Mansion for 20 people with view over entire LA',
   price_per_night: 800,
-  picture: 'url',
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/94427231/228a2a20_original.jpg?aki_policy=xx_large',
   user_id: User.all.sample.id
 },
 {
@@ -83,7 +83,7 @@ flats_attributes = [
   address: 'Rue Berenger 2322',
   description: 'Ideal place to Paris lovers with thousands of restaurants in the neighborhood',
   price_per_night: 30,
-  picture: 'url',
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/fa5d28e8-90a7-455a-b5ab-168976907eed.jpg?aki_policy=xx_large',
   user_id: User.all.sample.id
 },
 {
@@ -92,7 +92,7 @@ flats_attributes = [
   address: 'Frederiksberg Straat 23432',
   description: 'Experience Cophenhagens streests and canals by foot - fantastic location for anybody',
   price_per_night: 120,
-  picture: 'url',
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/34448792/80f1d5aa_original.jpg?aki_policy=xx_large',
   user_id: User.all.sample.id
 },
 {
@@ -101,7 +101,7 @@ flats_attributes = [
   address: 'Frederiksberg Straat 23432',
   description: 'Experience Cophenhagens streests and canals by foot - fantastic location for anybody',
   price_per_night: 120,
-  picture: 'url',
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/a73ba2f3-4776-46f2-9b38-4fee0962d0bb.jpg?aki_policy=xx_large',
   user_id: User.all.sample.id
 }
 ]
@@ -113,63 +113,63 @@ bookings_attributes = [
 {
   move_out_date: 20190802,
   move_in_date: 20190302,
-  status: 'requested',
+  status: 'requested by guest',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190702,
   move_in_date: 20190402,
-  status: 'confirmed',
+  status: 'confirmed by host',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190802,
   move_in_date: 20190502,
-  status: 'confirmed',
+  status: 'cancelled by guest',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190602,
   move_in_date: 20190507,
-  status: 'requested',
+  status: 'paid',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190602,
   move_in_date: 20190507,
-  status: 'requested',
+  status: 'cancelled by guest',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190502,
   move_in_date: 20190407,
-  status: 'confirmed',
+  status: 'denied by host',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20190808,
   move_in_date: 20190709,
-  status: 'confirmed',
+  status: 'confirmed by host',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20191102,
   move_in_date: 20191007,
-  status: 'requested',
+  status: 'denied by host',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 },
 {
   move_out_date: 20191202,
   move_in_date: 20191107,
-  status: 'requested',
+  status: 'paid',
   user_id: User.all.sample.id,
   flat_id: Flat.all.sample.id
 }

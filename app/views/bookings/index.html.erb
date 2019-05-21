@@ -1,0 +1,10 @@
+<ul>
+  <% @flat.bookings.each do |b| %>
+      <% b.reviews.each do |r|%>
+    <li>
+      <%= r.description %>
+      <%= r.stars %>
+    </li>
+    <% end %>
+  <% end %>
+</ul>

@@ -3,8 +3,6 @@ class FlatsController < ApplicationController
 
   def index
     @flats = Flat.all
-
-
   end
 
   def show
@@ -19,9 +17,9 @@ class FlatsController < ApplicationController
   def create
     @flat = Flat.new(flat_params)
 
-    @flat.user = User.find(params[:user_id])
+    @flat.user = current_user
 
-    if @flat.save
+    if @flat.save!
       redirect_to flat_path(@flat)
     else
       render :new
@@ -35,7 +33,7 @@ class FlatsController < ApplicationController
     if @flat.update(flat_params)
       redirect_to @flat, notice: 'Flat has been successfully updated'
     else
-      render :edit
+      render :new
     end
   end
 
@@ -51,7 +49,7 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:address, :title, :description, :price_per_night, :picture)
+    params.require(:flat).permit(:address, :title, :description, :price_per_night, :photo, :photo_cache)
   end
 end
 p
