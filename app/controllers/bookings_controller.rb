@@ -3,9 +3,12 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+    @flat = Flat.find(params[:flat_id])
+
   end
 
   def show
+     @flat = Flat.find(params[:flat_id])
   end
 
 

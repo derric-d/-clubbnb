@@ -2,8 +2,11 @@
 <ul>
   <li>
     <%= @review.description %>|
-    <%= @flat.stars %>|
+    <%= @review.stars %>|
     <%= link_to "❌", root_path, method: :delete, data: { confirm: 'are you sure' } %>
+    <%#= raise %>
+    <%= link_to "edit", edit_flat_booking_review_path(@flat, @review.booking, @review) %>
+
   </li>
 </ul>
 
