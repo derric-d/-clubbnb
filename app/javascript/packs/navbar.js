@@ -1,14 +1,27 @@
 const initUpdateNavbarOnScroll = () => {
-  const navbar = document.querySelector('.navbar-lewagon');
-  if (navbar) {
+  const navbarjs = document.querySelector('.navbar');
+  if (navbarjs) {
     window.addEventListener('scroll', () => {
       if (window.scrollY >= window.innerHeight) {
-        navbar.classList.add('navbar-lewagon-trans');
+        navbarjs.classList.add('navbar-trans');
       } else {
-        navbar.classList.remove('navbar-lewagon-trans');
+        navbarjs.classList.remove('navbar-trans');
       }
     });
   }
 }
 
 export { initUpdateNavbarOnScroll };
+
+
+const navbar = document.getElementById("nav");
+
+window.onscroll = function(){
+  if (window.pageYOffset > 80) {
+    navbar.style.background = "white";
+  }
+  else {
+    navbar.style.background = "transparent";
+  }
+}
+

@@ -1,3 +1,2 @@
 import "bootstrap";
-import { initUpdateNavbarOnScroll } from '../packs/navbar';
-initUpdateNavbarOnScroll();
+import '../components/_navbar.js'
