@@ -1,16 +1,29 @@
-<h1>Flats Show</h1>
-<ul>
-  <li>
-    <%= @flat.title %>|
-    <%= @flat.address %>|
-    <%= @flat.description %>|
-    <%= @flat.price_per_night %>|
-    <%= @flat.picture %>|
-    <%= link_to "❌", flat_path(@flat), method: :delete, data: { confirm: 'are you sure' } %>
-  </li>
-</ul>
-
-
 <div>
-    <%= link_to "back", root_path %>
+  <h1>Flats Show</h1>
+  <ul class="list-unstyled">
+    <li> <%= @flat.title %></li>
+    <li>  <%= @flat.address %></li>
+    <li>  <%= @flat.description %></li>
+    <li>  <%= @flat.price_per_night %></li>
+    <li>  <%= @flat.picture %></li>
+    <li>  <%= link_to "❌", flat_path(@flat), method: :delete, data: { confirm: 'are you sure' } %></li>
+  </ul>
+
+
+  <div>
+      <%= link_to "back", root_path %>
+  </div>
 </div>
+<!--
+<div class="card-trip">
+  <img src= <%= @flat.picture %> >
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @flat.title %></h2>
+      <p><%= @flat.description %></p>
+    </div>
+    <h2 class="card-trip-pricing"><%= @flat.price_per_night %></h2>
+  </div>
+</div>
+ -->
+
