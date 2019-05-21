@@ -18,7 +18,7 @@
 <!--       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"> -->
       <div class="card-flat-infos">
         <div id="card-rating">
-          <p><%= link_to flat.city.upcase, flat %></p>
+          <p><%= link_to flat.city, flat %></p>
           <h2><%= link_to flat.title, flat %></h2>
           <%#= raise %>
           <% flat.average_rating.times do %>
