@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     @booking.flat = Flat.find(params[:flat_id])
     @booking.user = User.find(params[:user_id])
     if @booking.save
-      redirect_to root_path
+      redirect_to booking_path
     else
       render :new
     end
