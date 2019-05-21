@@ -1,13 +1,14 @@
 .card-flat {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  height: 310px;
 }
 
 .card-flat > img {
-  height: 250px;
+  height: 200px;
   width: 100%;
   object-fit: cover;
   border-top-left-radius: 15px;
@@ -19,6 +20,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  padding-bottom: 5px;
 }
 
 .card-flat p {
@@ -26,6 +28,7 @@
   font-family: 'Roboto', sans-serif;
   opacity: .7;
   margin: 0;
+  padding-bottom: 3px;
 }
 
 
@@ -37,9 +40,16 @@
   position: relative;
 }
 
-.card-flat-infos .card-flat-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.card-flat .card-flat-infos i {
+  color: #710627;
+  font-size: 12px;
+}
+
+.card-flat .card-flat-infos p {
+  font-size: 12px;
+}
+
+
+#card-rating {
+  font-size: 12px;
 }

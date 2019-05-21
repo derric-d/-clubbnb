@@ -13,15 +13,20 @@
  <div class="row">
   <% @flats.each do |flat| %>
   <div class="col-md-3">
-    <div class="card-flat">
+    <div class="card-flat my-3">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
       <div class="card-flat-infos">
-        <div>
-          <p><%= flat.city %> rating</p>
+        <div id="card-rating">
+          <p><%= flat.city.upcase %></p>
           <h2><%= flat.title %></h2>
-          <p><%= flat.description %></p>
+          <%#= raise %>
+          <% flat.average_rating.times do %>
+          <i class="fas fa-star"></i>
+          <% end %> <%if flat.sum_rating == 0 %>
+          <p><em>No ratings yet</em></p>
+          <% else%> <%=  flat.sum_rating  %>
+          <% end  %>
         </div>
-        <h2 class="card-flat-pricing"><%= flat.price_per_night %></h2>
       </div>
     </div>
   </div>
