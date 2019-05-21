@@ -6,16 +6,18 @@ class FlatsController < ApplicationController
   end
 
   def show
+    authorize @flat
   end
 
   def new
     @flat = Flat.new
     @user = current_user
-
+    authorize @flat
   end
 
   def create
     @flat = Flat.new(flat_params)
+    authorize @flat
 
     @flat.user = current_user
 
@@ -52,4 +54,4 @@ class FlatsController < ApplicationController
     params.require(:flat).permit(:address, :title, :description, :price_per_night, :photo, :photo_cache)
   end
 end
-p
+
