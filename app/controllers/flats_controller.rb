@@ -3,8 +3,6 @@ class FlatsController < ApplicationController
 
   def index
     @flats = Flat.all
-
-
   end
 
   def show
@@ -35,7 +33,7 @@ class FlatsController < ApplicationController
     if @flat.update(flat_params)
       redirect_to @flat, notice: 'Flat has been successfully updated'
     else
-      render :edit
+      render :new
     end
   end
 
