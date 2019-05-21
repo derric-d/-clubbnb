@@ -19,7 +19,7 @@ class FlatsController < ApplicationController
 
     @flat.user = current_user
 
-    if @flat.save
+    if @flat.save!
       redirect_to flat_path(@flat)
     else
       render :new
@@ -49,7 +49,7 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:address, :title, :description, :price_per_night, :picture)
+    params.require(:flat).permit(:address, :title, :description, :price_per_night, :photo, :photo_cache)
   end
 end
 p
