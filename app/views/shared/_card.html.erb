@@ -14,11 +14,12 @@
   <% @flats.each do |flat| %>
   <div class="col-md-3">
     <div class="card-flat my-3">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+      <%= cl_image_tag flat.photo %>
+<!--       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"> -->
       <div class="card-flat-infos">
         <div id="card-rating">
-          <p><%= flat.city.upcase %></p>
-          <h2><%= flat.title %></h2>
+          <p><%= link_to flat.city.upcase, flat %></p>
+          <h2><%= link_to flat.title, flat %></h2>
           <%#= raise %>
           <% flat.average_rating.times do %>
           <i class="fas fa-star"></i>
@@ -31,4 +32,6 @@
     </div>
   </div>
   <% end %>
+
 </div>
+
