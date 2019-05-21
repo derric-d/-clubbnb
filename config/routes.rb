@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :users do
-    resources :flats, only: [:new, :create]
+  resources :flats, only: [:new, :create, :destroy] do
+    resources :bookings, only: [:new, :create, :show, :index] do
+      resources :reviews, only: [:new, :create, :delete, :update]
+   end
+
   end
 
-  resources :flats, only: [:index, :show, :destroy]
-
-  resources :bookings do
-    resources :reviews, only: [:new, :show, :create, :delete, :update]
+  resources :flats, only: [:index, :show] do
+    resources :reviews, only: [:show]
   end
 
-  resources :reviews, only: [:new, :show, :create, :delete, :update]
 end
