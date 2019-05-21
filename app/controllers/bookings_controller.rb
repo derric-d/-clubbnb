@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
     before_action :set_booking, only: [:show]
 
+  def index
+    @bookings = Booking.all
+  end
+
   def show
   end
 
@@ -12,11 +16,12 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @flat = Flat.find(params[:flat_id])
     @booking = Booking.new(booking_params)
-    @booking.flat = Flat.find(params[:flat_id])
-    @booking.user = User.find(params[:user_id])
+    @booking.flat = @flat
+    @booking.user = current_user
     if @booking.save
-      redirect_to booking_path
+      redirect_to flat_bookings_path(@booking)
     else
       render :new
     end
@@ -29,7 +34,7 @@ private
   end
 
   def booking_params
-    params.require(:booking).permit(:move_in_date, :move_out_date)
+    params.require(:booking).permit(:move_in_date, :move_out_date, :flat_id)
   end
 
 end
