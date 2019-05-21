@@ -1,29 +1,16 @@
-<div>
-  <h1>Flats Show</h1>
+<div class="list-margin col-md-9">
   <ul class="list-unstyled">
-    <li> <%= @flat.title %></li>
-    <li>  <%= @flat.address %></li>
-    <li>  <%= @flat.description %></li>
-    <li>  <%= @flat.price_per_night %></li>
-    <li>  <%= cl_image_tag @flat.photo %></li>
-    <li>  <%= link_to "❌", flat_path(@flat), method: :delete, data: { confirm: 'are you sure' } %></li>
+    <h1><li>  <%= @flat.title %></li></h1>
+    <br>
+    <h2><li> <strong>Location:</strong> <%= @flat.address %>, <%= @flat.city %></li></h2>
+    <h2><li>  <strong>Details:</strong> <%= @flat.description %></li></h2>
+   <h2> <li>  <strong>Rate:</strong> <%= @flat.price_per_night %> EUR per night</li></h2>
+    <li>  <%= cl_image_tag @flat.photo, width: 400, height: 300, crop: :fill %></li>
   </ul>
-
-
-  <div>
-      <%= link_to "back", root_path %>
-  </div>
+  <%= link_to "Delete this listing", flat_path(@flat), method: :delete, data: { confirm: 'Are you sure to delete your listing?' } %>
+  <br>
+  <%= link_to "Back to search results", root_path %>
+  <br>
+  <%= link_to "Book this flat", root_path %>
 </div>
-<!--
-<div class="card-trip">
-  <img src= <%= @flat.picture %> >
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= @flat.title %></h2>
-      <p><%= @flat.description %></p>
-    </div>
-    <h2 class="card-trip-pricing"><%= @flat.price_per_night %></h2>
-  </div>
-</div>
- -->
 
