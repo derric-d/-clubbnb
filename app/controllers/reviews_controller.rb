@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.booking = Review.find(params[:booking_id])
     if @review.save
-      redirect_to root_path
+      redirect_to review_path
     else
       render :new
     end
