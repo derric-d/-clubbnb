@@ -1,0 +1,29 @@
+<!-- <div class="card-flat">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+  <div class="card-flat-infos">
+    <div>
+      <p>Berlin ****</p>
+      <h2>Nice room in PrenzlauerBerg</h2>
+      <p>Cozy, nice, blabla, placeholder.</p>
+    </div>
+    <h2 class="card-flat-pricing">99</h2>
+  </div>
+</div>
+ -->
+ <div class="row">
+  <% @flats.each do |flat| %>
+  <div class="col-md-3">
+    <div class="card-flat">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+      <div class="card-flat-infos">
+        <div>
+          <p><%= flat.city %> rating</p>
+          <h2><%= flat.title %></h2>
+          <p><%= flat.description %></p>
+        </div>
+        <h2 class="card-flat-pricing"><%= flat.price_per_night %></h2>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
