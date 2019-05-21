@@ -1,14 +1,6 @@
-<h1>List of All flats</h1>
-<ul>
-  <% @flats.each do |flat| %>
-    <li>
-      <%= link_to flat.title, flat_path(flat) %>
-      <%= flat.title %>
-      <%= flat.address %>
-      <%= flat.description %>
-      <%= flat.price_per_night %>
-      <%= flat.picture %>
-    </li>
-  <% end %>
-</ul>
+<div class="list-margin">
+  <h3>Accomodation</h3>
+  <p>Explore city.name as a local.</p>
+  <%= render 'shared/card' %>
+</div>
 
