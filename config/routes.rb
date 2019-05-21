@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :flats, only: [:new, :create, :destroy] do
     resources :bookings, only: [:new, :create, :show, :index] do
-      resources :reviews, only: [:new, :create, :delete, :update, :edit]
+      resources :reviews, only: [:new, :create, :update, :edit]
    end
 
   end
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get "/index", to: "flats#index"
 
   resources :flats, only: [:index, :show] do
-    resources :reviews, only: [:show]
+    resources :reviews, only: [:show, :destroy]
   end
 
 end
