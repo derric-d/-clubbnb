@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <h1>Flats Show</h1>
   <ul class="list-unstyled">
     <li> <%= @flat.title %></li>
@@ -8,22 +8,25 @@
     <li>  <%= cl_image_tag @flat.photo %></li>
     <li>  <%= link_to "❌", flat_path(@flat), method: :delete, data: { confirm: 'are you sure' } %></li>
   </ul>
+</div> -->
 
 
-  <div>
-      <%= link_to "back", root_path %>
-  </div>
-</div>
-<!--
-<div class="card-trip">
-  <img src= <%= @flat.picture %> >
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= @flat.title %></h2>
-      <p><%= @flat.description %></p>
+
+<body style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.allwallpaper.in/wallpapers/2880x1800/14421/the-perfect-beach-2880x1800-wallpaper.jpg);">
+
+    <div class="card-trip m-5">
+    <img src= <%= @flat.picture %> >
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @flat.title %></h2>
+        <p><%= @flat.description %></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= @flat.price_per_night %> €</h2>
     </div>
-    <h2 class="card-trip-pricing"><%= @flat.price_per_night %></h2>
   </div>
-</div>
- -->
 
+    <div class="m-5 btn btn-primary" >
+      <%= link_to "back", flats_path %>
+    </div>
+
+</body>
