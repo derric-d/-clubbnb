@@ -5,7 +5,7 @@
     <li>  <%= @flat.address %></li>
     <li>  <%= @flat.description %></li>
     <li>  <%= @flat.price_per_night %></li>
-    <li>  <%= @flat.picture %></li>
+    <li>  <%= cl_image_tag @flat.photo %></li>
     <li>  <%= link_to "❌", flat_path(@flat), method: :delete, data: { confirm: 'are you sure' } %></li>
   </ul>
 
