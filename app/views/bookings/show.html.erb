@@ -1,22 +1,15 @@
-<h1>Booking Show</h1>
-<ul>
-  <li>
-    <p>Move-in date: <%= @booking.move_in_date %>|</p>
-     <br>
-    <p>Move-out date: <%= @booking.move_out_date %>|</p>
+<div class="container">
+  <h1>Your Booking</h1>
+    <p>Move-in date: <%= @booking.move_in_date %></p>
+    <p>Move-out date: <%= @booking.move_out_date %></p>
 
-    <%= link_to "❌", root_path, method: :delete, data: { confirm: 'are you sure' } %>
-  </li>
-</ul>
-<div>
-  <%= link_to "See this flats reviews", flat_booking_reviews_path(@flat, @booking) %>
-</div>
+  <div>
+    <%= link_to "Delete Booking  |  ", root_path, method: :delete, data: { confirm: 'are you sure' } %>
+    <%= link_to "See Reviews  |  ", flat_booking_reviews_path(@flat, @booking) %>
+    <%= link_to "Write a Review", new_flat_booking_review_path(@flat, @booking) %>
+  </div>
 
-<div>
-  <%= link_to "Leave a review", new_flat_booking_review_path(@flat, @booking) %>
-</div>
-
-
-<div>
-    <%= link_to "back", flat_path(@flat) %>
+  <div>
+      <%= link_to "Back", flat_path(@flat) %>
+  </div>
 </div>
