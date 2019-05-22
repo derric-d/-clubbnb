@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   get "/index", to: "flats#index"
-
+  get "/dashboard", to: "pages#dashboard"
   #cresources :users, only: [:show]
 
   resources :flats, only: [:index, :show] do
