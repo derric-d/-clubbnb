@@ -1,6 +1,7 @@
 class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :destroy]
 
+
   def index
     # @flats = Flat.all
     @flats = policy_scope(Flat).order(created_at: :desc)
@@ -9,6 +10,7 @@ class FlatsController < ApplicationController
 
   def show
     authorize @flat
+    @stars_avg = compute_stars_avg
   end
 
   def new
@@ -47,6 +49,15 @@ class FlatsController < ApplicationController
   end
 
   private
+
+  def compute_stars_avg
+    stars = []
+    @flat.reviews.each do |review|
+      stars << review.stars
+    end
+    stars_sum = stars.reduce(0) { |sum, num| sum + num }
+    stars_sum.to_f / stars.count
+  end
 
   def set_flat
     @flat = Flat.find(params[:id])

@@ -6,13 +6,19 @@
       <div>
         <h2><%= @flat.title %></h2>
         <p><%= @flat.description %></p>
+        <br>
+        <p><%= @stars_avg %> stars average </p>
       </div>
       <h2 class="card-trip-pricing"><%= @flat.price_per_night %> €</h2>
+    </div>
+
+    <div class="btn btn-success">
+      <%= link_to "Book this flat", new_flat_booking_path(@flat) %>
     </div>
   </div>
 
   <div class="m-5 btn btn-primary" >
-    <%= link_to "back", flats_path %>
+    <%= link_to "Back", flats_path %>
   </div>
 
 </body>
