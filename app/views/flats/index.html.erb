@@ -1,5 +1,15 @@
-<div class="list-margin">
-  <h3>Accomodation</h3>
-  <p>Explore city.name as a local.</p>
-  <%= render 'shared/card' %>
-</div>
+  <div class="list-margin">
+    <h1 style="padding-left: 20px;">Accomodations</h1>
+    <p style="padding-left: 20px;">Explore cities as a local.</p>
+    <div class="display-index">
+      <%= render 'shared/card' %>
+      <div
+      id="map"
+      style="width: 50%;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    </div>
+  </div>
+
+
