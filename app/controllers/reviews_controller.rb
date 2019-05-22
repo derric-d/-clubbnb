@@ -18,9 +18,9 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    authorize @review
     @flat = Flat.find(params[:flat_id])
     @booking = Booking.find(params[:booking_id])
-    authorize @review
   end
 
   def create
