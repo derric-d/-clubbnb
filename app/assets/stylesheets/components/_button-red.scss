@@ -1,0 +1,19 @@
+#button-red {
+  color: white;
+  background-color: #710627;
+  border: 2px solid #710627;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  padding: 7px 15px;
+  border-radius: 10px;
+}
+
+#button-red a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+
+input.btn {
+  color: white;
+}
