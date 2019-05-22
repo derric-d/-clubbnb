@@ -6,9 +6,8 @@
     <%= link_to "❌", root_path, method: :delete, data: { confirm: 'are you sure' } %>
   </li>
 </ul>
-
 <div>
-  <%#= link_to "See this flats reviews",  %>
+  <%= link_to "See this flats reviews", flat_booking_reviews_path(@flat, @booking) %>
 </div>
 
 <div>
