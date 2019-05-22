@@ -1,8 +1,10 @@
 <h1>Booking Show</h1>
 <ul>
   <li>
-    <%= @booking.move_in_date %>|
-    <%= @booking.move_out_date %>|
+    <p>Move-in date: <%= @booking.move_in_date %>|</p>
+     <br>
+    <p>Move-out date: <%= @booking.move_out_date %>|</p>
+
     <%= link_to "❌", root_path, method: :delete, data: { confirm: 'are you sure' } %>
   </li>
 </ul>
