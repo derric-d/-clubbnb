@@ -4,8 +4,18 @@ class FlatsController < ApplicationController
 
   def index
     # @flats = Flat.all
-    @flats = policy_scope(Flat).order(created_at: :desc)
+    @flats = policy_scope(Flat).order(created_at: :desc).where.not(latitude: nil, longitude: nil)
     # authorize @flats
+    # @flats = Flat.where.not(latitude: nil, longitude: nil)
+
+    @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { flat: flat }),
+        image_url: helpers.asset_url('https://i.ibb.co/wcBGNNd/Marker.png')
+      }
+    end
   end
 
   def show
