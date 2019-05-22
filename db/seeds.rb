@@ -87,7 +87,7 @@ flats_attributes = [
   user_id: User.all.sample.id
 },
 {
-  title: 'French-Style, Renovated Flat with Backyard in Frederiksberg',
+  title: 'French-Style Flat with Backyard',
   city: 'Copenhagen',
   address: 'Frederiksberg Straat 23432',
   description: 'Experience Cophenhagens streests and canals by foot - fantastic location for anybody',
@@ -96,7 +96,7 @@ flats_attributes = [
   user_id: User.all.sample.id
 },
 {
-  title: 'French-Style, Renovated Flat with Backyard in Frederiksberg',
+  title: 'Renovated Flat in Frederiksberg',
   city: 'Copenhagen',
   address: 'Frederiksberg Straat 23432',
   description: 'Experience Cophenhagens streests and canals by foot - fantastic location for anybody',
