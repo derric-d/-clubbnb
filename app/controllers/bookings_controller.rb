@@ -4,11 +4,12 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
     @flat = Flat.find(params[:flat_id])
-
+    authorize @booking
   end
 
   def show
      @flat = Flat.find(params[:flat_id])
+     authorize @booking
   end
 
 
@@ -16,15 +17,17 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @user = current_user
     @flat = Flat.find(params[:flat_id])
+    authorize @booking
   end
 
   def create
     @flat = Flat.find(params[:flat_id])
     @booking = Booking.new(booking_params)
+    authorize @booking
     @booking.flat = @flat
     @booking.user = current_user
     if @booking.save
-      redirect_to flat_bookings_path(@booking)
+      redirect_to flat_booking_path(@flat, @booking)
     else
       render :new
     end
