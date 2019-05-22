@@ -1,5 +1,5 @@
 <%= simple_form_for([@flat, @booking]) do |f| %>
     <%= f.input :move_in_date %>
     <%= f.input :move_out_date %>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary", id: "book" %>
 <% end %>
