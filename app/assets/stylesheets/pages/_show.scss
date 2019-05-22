@@ -4,7 +4,7 @@
   width: 90%;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
 
 .card-trip > img {
@@ -52,6 +52,7 @@
     border-color: #F6F6F6;
     color: white;
   }
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
   position: relative;
   left: 627px;
   background-color: white;
