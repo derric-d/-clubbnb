@@ -7,7 +7,15 @@
   </li>
 </ul>
 
+<div>
+  <%#= link_to "See this flats reviews",  %>
+</div>
 
 <div>
-    <%= link_to "back", root_path %>
+  <%= link_to "Leave a review", new_flat_booking_review_path(@flat, @booking) %>
+</div>
+
+
+<div>
+    <%= link_to "back", flat_path(@flat) %>
 </div>

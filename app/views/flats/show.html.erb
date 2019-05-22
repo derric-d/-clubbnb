@@ -38,7 +38,7 @@
   </body>
   <%= link_to "Delete this listing", flat_path(@flat), method: :delete, data: { confirm: 'Are you sure to delete your listing?' } %>
   <br>
-  <%= link_to "Back to search results", root_path %>
+  <%= link_to "Back to search results", index_path %>
   <br>
-  <%= link_to "Book this flat", root_path %>
+  <%= link_to "Book this flat", new_flat_booking_path(@flat) %>
 </div>
