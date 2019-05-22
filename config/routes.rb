@@ -18,5 +18,4 @@ Rails.application.routes.draw do
   resources :flats, only: [:index, :show] do
     resources :reviews, only: [:show, :destroy]
   end
-
 end
