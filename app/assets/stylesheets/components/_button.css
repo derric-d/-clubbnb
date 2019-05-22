@@ -1,0 +1,14 @@
+#button {
+  color: black;
+  border: 2px solid #710627;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+
+#button:hover {
+  background-color: #710627;
+  color: white;
+}
