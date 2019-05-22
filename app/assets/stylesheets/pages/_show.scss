@@ -48,9 +48,19 @@
 .btn a {
   text-decoration: none;
   color: white;
+  &:active {
+    background-color: #847878;
+    border-color: #847878;
+    color: white;
+  }
 }
 
 .btn-primary {
+  &:active {
+    background-color: #847878;
+    border-color: #847878;
+    color: white;
+  }
   &:hover {
     background-color: #847878;
     border-color: #847878;
@@ -67,6 +77,11 @@
 }
 
 .btn-success {
+  &:active {
+    background-color: #847878;
+    border-color: #847878;
+    color: white;
+  }
   &:hover {
     background-color: #847878;
     border-color: #847878;
