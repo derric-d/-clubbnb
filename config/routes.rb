@@ -4,18 +4,14 @@ Rails.application.routes.draw do
   #   get "/dashboard", to: "devise/sessions#dashboard"
   # end
   root to: 'pages#home'
-  resources :flats, only: [:new, :create, :destroy] do
-    resources :bookings, only: [:new, :create, :show, :index] do
-      resources :reviews, only: [:new, :create, :update, :edit, :index]
-   end
-
+  resources :flats  do
+    resources :bookings, only: [:new, :create, :show, :index]
+    resources :reviews, only: [:new, :create, :update, :edit, :index]
   end
 
-  get "/index", to: "flats#index"
+
   get "/dashboard", to: "pages#dashboard"
   #cresources :users, only: [:show]
 
-  resources :flats, only: [:index, :show] do
-    resources :reviews, only: [:show, :destroy]
-  end
+  resources :reviews, only: [ :destroy ]
 end

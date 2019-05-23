@@ -1,6 +1,5 @@
 class FlatsController < ApplicationController
-  before_action :set_flat, only: [:show, :edit, :destroy]
-
+  before_action :set_flat, only: [:show, :edit, :destroy, :update]
 
   def index
     # @flats = Flat.all
@@ -43,19 +42,22 @@ class FlatsController < ApplicationController
   end
 
   def edit
+    authorize @flat
   end
 
   def update
+    authorize @flat
     if @flat.update(flat_params)
       redirect_to @flat, notice: 'Flat has been successfully updated'
     else
-      render :new
+      render :edit
     end
   end
 
   def destroy
+    authorize @flat
     @flat.destroy
-    redirect_to root_path, notice: 'flat was successfully deleted.'
+    redirect_to dashboard_path, notice: 'flat was successfully deleted.'
   end
 
   private
@@ -77,4 +79,3 @@ class FlatsController < ApplicationController
     params.require(:flat).permit(:address, :title, :description, :price_per_night, :photo, :photo_cache)
   end
 end
-
