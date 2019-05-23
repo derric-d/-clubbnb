@@ -5,8 +5,8 @@
 
   <div>
     <%= link_to "Delete Booking  |  ", root_path, method: :delete, data: { confirm: 'are you sure' } %>
-    <%= link_to "See Reviews  |  ", flat_booking_reviews_path(@flat, @booking) %>
-    <%= link_to "Write a Review", new_flat_booking_review_path(@flat, @booking) %>
+    <%= link_to "See Reviews  |  ", flat_bookings_path(@flat, @booking) %>
+    <%= link_to "Write a Review", new_flat_review_path(@flat, @booking) %>
   </div>
 
   <div>

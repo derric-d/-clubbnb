@@ -2,7 +2,7 @@ class Booking < ApplicationRecord
   belongs_to :flat
   belongs_to :user
 
-  has_one :review
+  has_many :reviews
 
 
   # def all_bookings_for_user

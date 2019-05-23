@@ -13,7 +13,11 @@
     </div>
 
     <div class="btn btn-success">
-      <%= link_to "Book this flat", new_flat_booking_path(@flat) %>
+      <% if @flat.user == current_user %>
+        <%= link_to "Edit this flat", edit_flat_path(@flat) %>
+      <% else %>
+        <%= link_to "Book this flat", new_flat_booking_path(@flat) %>
+      <% end %>
     </div>
   </div>
 
