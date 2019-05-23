@@ -11,10 +11,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Home", root_path, class: "nav-link" %>
+        <%= link_to "Home", root_path, class: "nav-link", id: "home-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Login", new_user_session_url, class: "nav-link" %>
+        <%= link_to "Login", new_user_session_url, class: "nav-link", id: "login-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Create Flat", new_flat_path, class: "nav-link", id: "create-link" %>
       </li>
       <li class="nav-item dropdown">
         <%= image_tag "https://cdn2.iconfinder.com/data/icons/scenarium-vol-4/128/011_avatar_anonymous_profile_privacy_hacker_mask_hoodie-512.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
