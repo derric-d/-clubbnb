@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :show, :destroy, :update, :edit]
+  before_action :authenticate_user!, :set_review, only: [:show, :show, :destroy, :update, :edit]
 
   def index
     # @booking = Booking.find(params[:booking_id])
