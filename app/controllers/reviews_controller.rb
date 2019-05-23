@@ -2,13 +2,10 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!, :set_review, only: [:show, :show, :destroy, :update, :edit]
 
   def index
-    @booking = Booking.find(params[:booking_id])
-    # @reviews = Review.where(booking_id: @booking.id)
-
-    # @flat = Flat.find(params[:flat_id])
-    # authorize @review
-    @reviews = policy_scope(Review).where(booking_id: @booking.id)
-
+    # @booking = Booking.find(params[:booking_id])
+    @flat = Flat.where(params[:flat_id])
+    @reviews = policy_scope(Review).where(flat_id: (params[:flat_id]))
+    # @reviews = policy_scope(Review).where(booking_id: @booking.id)
   end
 
   def show
@@ -20,16 +17,15 @@ class ReviewsController < ApplicationController
     @review = Review.new
     authorize @review
     @flat = Flat.find(params[:flat_id])
-    @booking = Booking.find(params[:booking_id])
   end
 
   def create
     @flat = Flat.find(params[:flat_id])
     @review = Review.new(review_params)
     authorize @review
-    @review.booking = Booking.find(params[:booking_id])
+    @review.flat = @flat
     if @review.save!
-      redirect_to flat_review_path(@flat, @review)
+      redirect_to flat_reviews_path(@flat)
     else
       render :new
     end
@@ -46,7 +42,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     authorize @review
-    @flat = Flat.find(params[:flat_id])
+    @flat = @review.flat
     @review.destroy
     redirect_to flat_path(@flat), notice: 'review was successfully deleted.'
   end
@@ -58,6 +54,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:description, :stars, :booking_id)
+    params.require(:review).permit(:description, :stars)
   end
 end

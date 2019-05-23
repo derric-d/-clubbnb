@@ -2,7 +2,7 @@ class Booking < ApplicationRecord
   belongs_to :flat
   belongs_to :user
 
-  has_one :review
+  has_many :reviews
 
   def datepicker_input form, field
     content_tag :td, :data => {:provide => 'datepicker', 'date-format' => 'yyyy-mm-dd', 'date-autoclose' => 'true'} do

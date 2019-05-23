@@ -1,0 +1,24 @@
+<div class="list-margin">
+
+  <div class="dashboard">
+    <% if @user.flats == []  %>
+    <h3 style="text-align:left;">Become a host</h3><br>
+    <p>Your place is a place to stay? Share your home with others.</p><br>
+    <span id="button-red"><%= link_to "Become a host", new_flat_path %></span>
+    <% else  %>
+
+    <% if @user.flats.count == 1  %>
+    <h3 style="text-align:left;">Your flat</h3>
+    <p>This is the home you currently offer to others.</p>
+    <% else %>
+    <h3 style="text-align:left;">Your flats</h3>
+    <p>Here's an overview of all your flats.</p>
+    <% end %>
+    <%= render 'dashboard/carddashboard' %>
+
+    <br><br><span id="button-red"><%= link_to "Add another home", new_flat_path %></span>
+    <% end %>
+    <br><br>
+  </div>
+
+</div>

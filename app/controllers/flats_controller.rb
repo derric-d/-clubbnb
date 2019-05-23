@@ -1,10 +1,20 @@
 class FlatsController < ApplicationController
-  before_action :set_flat, only: [:show, :edit, :destroy]
-
+  before_action :set_flat, only: [:show, :edit, :destroy, :update]
 
   def index
     # @flats = Flat.all
-    @flats = policy_scope(Flat).order(created_at: :desc).where.not(latitude: nil, longitude: nil)
+      @flats = policy_scope(Flat).order(created_at: :desc).where.not(latitude: nil, longitude: nil)
+    if params[:query].present?
+
+      # @flats = @flats.where(address: params[:query])
+      sql_query = " \
+        flats.title @@ :query \
+        OR flats.address @@ :query \
+        OR flats.city @@ :query \
+        "
+      # sql_query = "title ILIKE :query OR address ILIKE :query"
+      @flats = @flats.where(sql_query, query: "%#{params[:query]}%")
+    end
     # authorize @flats
     # @flats = Flat.where.not(latitude: nil, longitude: nil)
 
@@ -43,19 +53,22 @@ class FlatsController < ApplicationController
   end
 
   def edit
+    authorize @flat
   end
 
   def update
+    authorize @flat
     if @flat.update(flat_params)
       redirect_to @flat, notice: 'Flat has been successfully updated'
     else
-      render :new
+      render :edit
     end
   end
 
   def destroy
+    authorize @flat
     @flat.destroy
-    redirect_to root_path, notice: 'flat was successfully deleted.'
+    redirect_to dashboard_path, notice: 'flat was successfully deleted.'
   end
 
   private
@@ -74,7 +87,6 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:address, :title, :description, :price_per_night, :photo, :photo_cache)
+    params.require(:flat).permit(:address, :title, :city, :description, :price_per_night, :photo, :photo_cache)
   end
 end
-

@@ -1,3 +1,50 @@
 .dashboard a {
   color: black;
 }
+
+.dashboard-flex {
+  display: flex;
+  margin-left: 10px;
+}
+
+.dashboard i {
+  font-size: 40px;
+  // color: #6c757d;
+  color: #710627;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.dashboard th {
+  width: 20px;
+  padding-top: 5px;
+}
+
+// NAVBAR
+
+.nav {
+  background-color: white;
+  height: 60vh;
+  padding-top: 2px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.nav.flex-column.nav-pills {
+  width: 20%
+}
+
+#v-pills-home-tab.nav-link.active {
+  background-color: #710627;
+  color: white;
+}
+
+#v-pills-tab a{
+  color: #6c757d;
+}
+
+.v-pills-settings-tab.nav-link.active {
+  background-color: #710627;
+  color: white;
+}
+
+

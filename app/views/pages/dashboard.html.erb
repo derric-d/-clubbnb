@@ -1,31 +1,38 @@
-<div class="list-margin">
+  <div class="dashboard-flex">
 
-  <div class="dashboard">
-    <% if @user.flats == []  %>
-    <h4 style="text-align:left;">Become a host</h4>
-    <p>Your place is a place to stay? Share your home with others.</p>
-    <span id="button-red"><%= link_to "Become a host", new_flat_path %></span>
-    <% else  %>
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Flats</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Trips</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Reviews</a>
+    </div>
 
-    <% if @user.flats.count == 1  %>
-    <h4 style="text-align:left;">Your flat</h4>
-    <% else %>
-    <h4 style="text-align:left;">Your flats</h4>
-    <% end %>
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        <%= render 'dashboard/overview' %>
+      </div>
+      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+        <%#= render 'devise/passwords/edit' %>
+      </div>
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+        <%= render 'dashboard/flats' %>
+      </div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+        <%= render 'dashboard/bookings' %>
+      </div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Reviews</div>
+    </div>
 
-    <% @user.flats.each do |flat| %>
-    <p><%= link_to flat.title, flat %>
-    <%= link_to "🗑", flat_path(flat), method: :delete, data: { confirm: 'are you sure?'}  %></p>
-    <% end %>
+
 
     <span id="button-red"><%= link_to "Add another home", new_flat_path %></span>
-    <% end %>
+    <%# end %>
     <br><br><br><br>
 
     <h4 style="text-align:left;"> Your next stay</h4>
     <p>Looks like you haven't planned any trip. Time to get some inspiration.</p>
-    <span id="button-red"><%= link_to "Plan your next trip", index_path %></span>
+    <span id="button-red"><%= link_to "Plan your next trip", flats_path %></span>
     <br><br><br><br><br>
-  </div>
 
-</div>
+  </div>
