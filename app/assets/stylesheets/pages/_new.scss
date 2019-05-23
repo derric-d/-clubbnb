@@ -26,3 +26,20 @@ h1 {
   left: 40%;
   margin-top: 30px;
 }
+
+#couple {
+  &:hover {
+    border-color: #D3D3D3;
+    background-color: #D3D3D3;
+  }
+  border-color: white;
+  background-color: white;
+  color: #5e5b5b;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 30px 15px;
+}
+
+.move {
+  font-size: 20px;
+}
