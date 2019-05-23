@@ -13,6 +13,7 @@
  <div class="row col-md-8">
   <% @flats.each do |flat| %>
   <div class="col-md-4">
+    <%= link_to flat_path(flat) do  %>
     <div class="card-flat my-2">
       <%= cl_image_tag flat.photo %>
 <!--       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"> -->
@@ -21,7 +22,8 @@
 
           <p><%#= link_to flat.city.upcase, flat_path(flat) %></p>
 
-          <h2><%= link_to flat.title, flat %></h2>
+          <!-- <h2><%= link_to flat.title, flat %></h2> -->
+          <h2><%=  flat.title %> </h2>
           <%#= raise %>
           <% flat.average_rating.times do %>
           <i class="fas fa-star"></i>
@@ -32,6 +34,7 @@
         </div>
       </div>
     </div>
+    <% end %>
   </div>
   <% end %>
 
