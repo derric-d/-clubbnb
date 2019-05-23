@@ -16,3 +16,6 @@ Rails.application.routes.draw do
   resources :reviews, only: [ :destroy ]
   # resources :bookings, only: [ :destroy ]
 end
+# heroku pg:reset
+# heroku run rails db:migrate
+# heroku run rails db:seed

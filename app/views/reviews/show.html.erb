@@ -3,8 +3,7 @@
   <li>
     <%= @review.description %>|
     <%= @review.stars %>|
-    <%= link_to "❌", flat_review_path(@flat), method: :delete, data: { confirm: 'are you sure' } %>
-
+    <%= link_to "xssss", flat_review_path(@flat), method: :delete, data: { confirm: 'are you sure' } %>
   </li>
 </ul>
 
