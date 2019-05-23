@@ -1,0 +1,26 @@
+<div class="list-margin">
+
+  <div class="dashboard">
+    <h3 style="text-align:left;">Update your profile</h3><br>
+    <table style="width:100%">
+      <tr>
+        <td><p>First Name</p></td>
+        <td><p><%= current_user.first_name %></p></td>
+      </tr>
+      <tr>
+        <td><p>Last Name</p></td>
+        <td><p><%= current_user.last_name %></p></td>
+        </tr>
+        <tr>
+        <td><p>Email</p></td>
+        <td><p><%= current_user.email %></p></td>
+        </tr>
+      </table><br>
+      <span id="button-red"><%= link_to "Edit your profile", edit_user_registration_path(@user)  %></span>
+
+    </div>
+
+  </div>
+
+
+
