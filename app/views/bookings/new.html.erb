@@ -1,9 +1,18 @@
-<body style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),  url('https://www.slc.gov/fire/wp-content/uploads/sites/47/2018/11/fireworks.jpg')">
-
-<div class="container">
-  <h1>Your Booking</h1>
-
-  <%= render 'form', booking: @booking %>
+<div class="row">
+  <div class="card-trip">
+    <%= cl_image_tag @flat.photo %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @flat.title %></h2>
+        <p><%= @flat.description %></p>
+        <br>
+      </div>
+        <h2 class="card-trip-pricing"><%= @flat.price_per_night %> €</h2>
+      </div>
+    </div>
+  </div>
+  <div class="card-trip">
+    <h1>Your Booking</h1>
+    <%= render 'form', booking: @booking %>
+  </div>
 </div>
-
-</body>

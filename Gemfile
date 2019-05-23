@@ -22,6 +22,7 @@ gem 'pundit'
 gem 'devise'
 
 gem 'geocoder'
+gem 'bootstrap-datepicker-rails'
 
 
 group :development do
