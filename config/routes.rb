@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # end
   root to: 'pages#home'
   resources :flats  do
-    resources :bookings, only: [:new, :create, :show, :index]
+    resources :bookings, only: [:new, :create, :show, :index, :destroy]
     resources :reviews, only: [:new, :create, :update, :edit, :index]
   end
 
@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   #cresources :users, only: [:show]
 
   resources :reviews, only: [ :destroy ]
+  # resources :bookings, only: [ :destroy ]
 end
