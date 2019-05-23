@@ -5,8 +5,16 @@
       <div class="col-md-4">
         <div class="box">
           <h1>Made to stay.</h1>
+
+          <%= form_tag flats_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find a Flat"
+            %>
+          <% end %>
           <p>You can't search for anything yet.<br>But if you click on button, it will show you all flats.</p> <br>
-          <span id="button"><%= link_to "Click me", index_path %></span>
+          <span id="button"><%= link_to "Click me", flats_path %></span>
         </div>
       </div>
     </div>

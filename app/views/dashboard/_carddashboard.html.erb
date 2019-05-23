@@ -1,0 +1,24 @@
+
+ <div class="row col-md-4">
+  <% @user.flats.each do |flat| %>
+    <div class="card-flat-dashboard">
+      <%= cl_image_tag flat.photo %>
+      <div class="card-flat-dashboard-infos">
+        <div id="card-dasboard-rating">
+          <p><%#= link_to flat.city.upcase, flat_path(flat) %></p>
+          <h2><%= link_to flat.title, flat %></h2>
+          <%#= raise %>
+          <% flat.average_rating.times do %>
+          <i class="fas fa-star"></i>
+          <% end %> <%if flat.sum_rating == 0 %>
+          <p><em>No ratings yet</em></p>
+          <% else%> <%=  flat.sum_rating  %>
+          <% end  %>
+          <p><%= link_to " Delete 🗑", flat_path(flat), method: :delete, data: { confirm: 'are you sure?'}  %> | <%= link_to "  Edit 🖊" , root_path %> </p>
+        </div>
+    </div>
+  </div>
+  <% end %>
+
+</div>
+
