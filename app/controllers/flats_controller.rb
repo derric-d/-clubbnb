@@ -3,7 +3,18 @@ class FlatsController < ApplicationController
 
   def index
     # @flats = Flat.all
-    @flats = policy_scope(Flat).order(created_at: :desc).where.not(latitude: nil, longitude: nil)
+      @flats = policy_scope(Flat).order(created_at: :desc).where.not(latitude: nil, longitude: nil)
+    if params[:query].present?
+
+      # @flats = @flats.where(address: params[:query])
+      sql_query = " \
+        flats.title @@ :query \
+        OR flats.address @@ :query \
+        OR flats.city @@ :query \
+        "
+      # sql_query = "title ILIKE :query OR address ILIKE :query"
+      @flats = @flats.where(sql_query, query: "%#{params[:query]}%")
+    end
     # authorize @flats
     # @flats = Flat.where.not(latitude: nil, longitude: nil)
 
@@ -76,6 +87,6 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:address, :title, :description, :price_per_night, :photo, :photo_cache)
+    params.require(:flat).permit(:address, :title, :city, :description, :price_per_night, :photo, :photo_cache)
   end
 end
