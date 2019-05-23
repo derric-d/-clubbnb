@@ -25,7 +25,7 @@ class ReviewsController < ApplicationController
     authorize @review
     @review.flat = @flat
     if @review.save!
-      redirect_to flat_reviews_path(@flat, @review)
+      redirect_to flat_reviews_path(@flat)
     else
       render :new
     end
