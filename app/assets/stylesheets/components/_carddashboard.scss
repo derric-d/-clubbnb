@@ -1,0 +1,59 @@
+.card-flat-dashboard {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 250px;
+}
+
+.card-flat-dashboard a {
+  color: black;
+}
+
+.card-flat-dashboard > img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-flat-dashboard h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.card-flat-dashboard p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  padding-bottom: 3px;
+}
+
+
+.card-flat-dashboard .card-flat-dashboard-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-flat .card-flat-dasboard-infos i {
+  color: #710627;
+  font-size: 12px;
+}
+
+.card-flat .card-flat-dashboard-infos p {
+  font-size: 12px;
+}
+
+
+#card-dashboard-rating {
+  font-size: 12px;
+}
+
+
