@@ -12,12 +12,12 @@
       <h2 class="card-trip-pricing"><%= @flat.price_per_night %> €</h2>
     </div>
 
-    <div class="btn btn-success">
+    <div class="btn btn-book">
       <%= link_to "Book this flat", new_flat_booking_path(@flat) %>
     </div>
   </div>
 
-  <div class="m-5 btn btn-primary" >
+  <div class="m-5 btn btn-back" >
     <%= link_to "Back", flats_path %>
   </div>
 
