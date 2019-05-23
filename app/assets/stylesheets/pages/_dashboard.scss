@@ -33,8 +33,14 @@
   width: 20%
 }
 
-#v-pills-home-tab.nav-link.active {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: white;
   background-color: #710627;
+}
+
+#v-pills-tab.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   color: white;
 }
 
@@ -47,4 +53,9 @@
   color: white;
 }
 
+.background {
+  // background-image: url("https://ui-ex.com/images/texas-drawing-skyline-2.png");
+  // background-image: url("https://www.pinclipart.com/picdir/middle/109-1092788_toronto-skyline-silhouette-transparent-toronto-skyline-black-and.png");
+  background-repeat: no-repeat;
 
+}
