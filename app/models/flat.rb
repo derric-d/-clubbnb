@@ -6,9 +6,6 @@ class Flat < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  # def all_reviews_for_flat
-  #   self.bookings.map { |booking| booking.reviews }
-  # end
 
   def average_rating
     sum = 0
