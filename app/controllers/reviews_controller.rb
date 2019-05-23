@@ -42,7 +42,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     authorize @review
-    @flat = Flat.find(params[:flat_id])
+    @flat = @review.flat
     @review.destroy
     redirect_to flat_path(@flat), notice: 'review was successfully deleted.'
   end

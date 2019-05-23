@@ -5,6 +5,8 @@
     <li>
       <%= b.description %>
       <%= b.stars %>
+      <%= link_to "x", review_path(b), method: :delete, data: { confirm: 'are you sure' } %>
+
     </li>
 
   <% end %>
