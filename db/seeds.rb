@@ -182,47 +182,56 @@ reviews_attributes = [
 {
   stars: 5,
   description: 'Fantastic stay at this awesome host',
-  booking_id: Booking.all.sample.id
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
 },
 {
   stars: 3,
   description: 'Was decent but not great',
-  booking_id: Booking.all.sample.id
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
 },
 {
   stars: 2,
   description: 'OKish',
-  booking_id: Booking.all.sample.id
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
 },
 {
   stars: 4,
   description: 'Fantastic but flat was dirty',
-  booking_id: Booking.all.sample.id
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
 },
 {
   stars: 4,
   description: 'Super duper',
-  booking_id: Booking.all.sample.id
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
 },
 {
   stars: 1,
   description: 'Super baaaad!',
-  booking_id: Booking.all.sample.id
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
 },
 {
   stars: 2,
   description: 'Super loud street!',
-  booking_id: Booking.all.sample.id
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
 },
 {
   stars: 5,
   description: 'Just fantastic!',
-  booking_id: Booking.all.sample.id
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
 },
 {
   stars: 5,
   description: 'Thank you!!',
-  booking_id: Booking.all.sample.id
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
 }
 ]
 
