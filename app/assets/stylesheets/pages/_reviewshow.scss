@@ -1,0 +1,31 @@
+#review-back-btn a {
+  &:hover {
+    background-color: #D4D4D4;
+    border-color: #D4D4D4;
+    text-decoration: none;
+  }
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  background-color: white;
+  border-radius: 5px;
+  border-color: white;
+  display: inline-block;
+  padding: 9px 20px;
+  padding-top: 7px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  color: black;
+  text-decoration: none;
+  margin: auto 15px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+}
+
+.background-image {
+  background-size: cover;
+}
