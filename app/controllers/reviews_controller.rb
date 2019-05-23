@@ -1,6 +1,16 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :show, :destroy, :update, :edit]
 
+  def index
+    @booking = Booking.find(params[:booking_id])
+    # @reviews = Review.where(booking_id: @booking.id)
+
+    # @flat = Flat.find(params[:flat_id])
+    # authorize @review
+    @reviews = policy_scope(Review).where(booking_id: @booking.id)
+
+  end
+
   def show
     @flat = Flat.find(params[:flat_id])
     authorize @review
@@ -8,9 +18,9 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    authorize @review
     @flat = Flat.find(params[:flat_id])
     @booking = Booking.find(params[:booking_id])
-    authorize @review
   end
 
   def create

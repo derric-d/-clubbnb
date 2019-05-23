@@ -1,0 +1,28 @@
+#button-red {
+  color: white;
+  background-color: #710627;
+  border: 2px solid #710627;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#button-red a {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+}
+
+input.btn {
+  color: white;
+}
+
+#button-red:hover a {
+  color: #f6f6f6;
+}
+
+#button-red:hover {
+  // background-color: #55051d;
+  background-color: #900a34;
+}

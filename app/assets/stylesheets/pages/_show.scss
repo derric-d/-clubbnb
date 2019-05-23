@@ -4,7 +4,7 @@
   width: 90%;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
 
 .card-trip > img {
@@ -16,13 +16,13 @@
 .card-trip h2 {
   font-size: 28px;
   font-weight: bold;
-  margin: 0;
+  margin: 2px;
 }
 
 .card-trip p {
   font-size: 17px;
   opacity: .7;
-  margin-top: 4px;
+  margin: 2px;
 }
 
 
@@ -45,19 +45,51 @@
   font-size: 20px;
 }
 
-
-.btn-primary {
-  &:hover {
-    background-color: #F6F6F6;
-    border-color: #F6F6F6;
+.btn a {
+  text-decoration: none;
+  color: white;
+  &:active {
+    background-color: #847878;
+    border-color: #847878;
     color: white;
   }
+}
+
+.btn-primary {
+  &:active {
+    background-color: #847878;
+    border-color: #847878;
+    color: white;
+  }
+  &:hover {
+    background-color: #847878;
+    border-color: #847878;
+    color: white;
+  }
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
   position: relative;
   left: 627px;
-  background-color: white;
-  border-color: white;
-  color: transparent;
+  background-color: #a59898;
+  border-color: #a59898;
+  color: white;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.btn-success {
+  &:active {
+    background-color: #847878;
+    border-color: #847878;
+    color: white;
+  }
+  &:hover {
+    background-color: #847878;
+    border-color: #847878;
+    color: white;
+  }
+  width: 100%;
+  background-color: #a59898;
+  border-color: #a59898;
+  color: white;
 }
 

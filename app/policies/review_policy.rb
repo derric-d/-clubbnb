@@ -5,6 +5,11 @@ class ReviewPolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    true
+  end
+
+
   def update?
     true
   end
