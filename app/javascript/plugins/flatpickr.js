@@ -9,6 +9,4 @@ flatpickr("#start_date", {
   minDate: "today",
 });
 
-initMapbox();
-initAutocomplete();
 

@@ -4,7 +4,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 265px;
+  height: 255px;
   transform: scale(1);
   transition: transform 150ms linear;
 }
@@ -55,7 +55,7 @@
 
 
 .card-flat .card-flat-infos {
-  padding: 16px;
+  padding: 10px 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -76,7 +76,10 @@
   font-size: 12px;
 }
 
-
 td {
   vertical-align: middle;
+}
+
+.rating {
+  color:black;
 }
