@@ -1,15 +1,20 @@
+  <h1>Your upcoming Trips</h1>
+  <div class="row">
+    <% @user.bookings.each do |booking| %>
+      <div class="col-md-4">
+      <div class="card-flat-dashboard m-2">
+        <%= cl_image_tag booking.flat.photo %>
+          <div class="card-flat-dashboard-infos">
+            <div id="card-dashboard-rating">
+              <h2><%= link_to booking.flat.title, booking.flat %></h2>
+              <p>Booked from <%= booking.move_in_date %> until <%= booking.move_out_date %></p>
+              <p><%= link_to " View details",flat_booking_path(booking.flat,booking)%></p>
+            </div>
+          </div>
+          </div>
+      </div>
+      <% end %>
+  </div>
 
-<ul>
-  <p>Your Trips planned:</p><br>
-  <% @user.bookings.each do |booking| %>
-    <% unless booking.move_in_date.nil? %>
-      <li>
-        You have booked
-        <%= booking.flat.title %> <br>
-        from <%= booking.move_in_date%> until <%= booking.move_out_date %>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
 
 

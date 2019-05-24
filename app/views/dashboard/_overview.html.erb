@@ -1,7 +1,7 @@
 <div class="list-margin">
     <div class="dashboard" >
       <h3 style="text-align:left;">Welcome back, <%= @user.first_name %>.</h3><br>
-      <p>Your activity:</p>
+      <p>Your activities:</p>
       <table style="width:100%">
         <tr>
           <th><i class="fas fa-home"></i></th>
@@ -16,15 +16,11 @@
         <tr>
           <th><i class="fas fa-suitcase"></i></th>
           <td>
-            <% if @booking.nil?  %>
+            <% if @current_user.bookings.nil?  %>
             <p><%= link_to "Time to plan your next trip.", root_path %></p>
             <% else %>
-            <p>Your next trip is on .</p>
+            <p>You have <%= @current_user.bookings.count %> upcoming trips.</p>
             <% end %></td>
-          </tr>
-          <tr>
-            <th><i class="fas fa-star"></i></th>
-            <td>No idea what to write.</td>
           </tr>
         </table>
       </div>
