@@ -10,6 +10,9 @@ class Booking < ApplicationRecord
     end
   end
 
+  validates :move_in_date, presence: true
+  validates :move_out_date, presence: true
+
   # def all_bookings_for_user
   #   self.bookings.map do |booking|
   #   booking.review
