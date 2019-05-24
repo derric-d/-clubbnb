@@ -29,8 +29,12 @@ class FlatsController < ApplicationController
   end
 
   def show
-    authorize @flat
     @stars_avg = compute_stars_avg
+    @booking = Booking.new
+    @user = current_user
+    @flat = Flat.find(params[:id])
+    authorize @flat
+    authorize @booking
   end
 
   def new

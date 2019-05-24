@@ -2,8 +2,8 @@
 
   <div class="container">
     <h1>Your Booking in <%= @flat.city %></h1>
-      <p class="move">Start date: <%= @booking.move_in_date %></p>
-      <p class="move">End date: <%= @booking.move_out_date %></p>
+      <p class="move">Start date: <%= @booking.move_in_date.strftime("%A, %d %b %Y") %></p>
+      <p class="move">End date: <%= @booking.move_out_date.strftime("%A, %d %b %Y") %></p>
       <% duration = @booking.move_out_date - @booking.move_in_date %>
       <p class="move">Length: <%= duration.to_i %> days</p>
       <% costs = duration.to_i * @flat.price_per_night %>
