@@ -1,18 +1,21 @@
-<div class="row">
-  <div class="card-trip">
-    <%= cl_image_tag @flat.photo %>
-    <div class="card-trip-infos">
-      <div>
-        <h2><%= @flat.title %></h2>
-        <p><%= @flat.description %></p>
-        <br>
-      </div>
+<div class="list-margin">
+  <h1 style="padding-left: 20px;"><strong>Confirm your booking</strong></h1>
+  <div class="display-index">
+    <div class="card-trip">
+      <%= cl_image_tag @flat.photo %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @flat.title %></h2>
+          <p><%= @flat.description %></p>
+          <br>
+        </div>
         <h2 class="card-trip-pricing"><%= @flat.price_per_night %> €</h2>
       </div>
     </div>
-  </div>
-  <div class="card-trip">
-    <h1>Your Booking</h1>
-    <%= render 'form', booking: @booking %>
+    <div class="card-trip p-4 ml-4">
+        <h1><strong>Your Booking in <%= @flat.city %></strong></h1>
+        <br>
+        <%= render 'form', booking: @booking %>
+    </div>
   </div>
 </div>
