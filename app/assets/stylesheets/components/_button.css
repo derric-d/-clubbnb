@@ -19,6 +19,10 @@
   color: black;
 }
 
+.btn-primary {
+  color: #900a34;
+}
+
 #button:hover a {
   color: white;
 }
