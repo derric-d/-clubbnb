@@ -7,12 +7,14 @@
       <ul>
         <% @reviews.each do |b| %>
           <li>
-            <%= b.description %>
-            <%= b.stars %>
+            <%= b.description %> |
+            <%= b.stars %> Stars
             <%= link_to "x", review_path(b), method: :delete, data: { confirm: 'are you sure' } %>
 
           </li>
         <% end %>
       </ul>
+      <%= link_to 'Back', 'javascript:history.back()', class: "btn ", id: "couple" %>
+      <%#= link_to "Back", flat_booking_path(@flat, @booking), class: "btn ", id: "couple"  %>
   </div>
 </body>
