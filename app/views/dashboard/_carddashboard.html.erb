@@ -1,27 +1,28 @@
-
-
 <div class="row">
-    <% @user.flats.each do |flat| %>
+  <% @user.flats.each do |flat| %>
   <div class="col-md-4">
-    <div class="card-flat-dashboard m-2">
-      <%= cl_image_tag flat.photo %>
-      <div class="card-flat-dashboard-infos">
-        <div id="card-dashboard-rating">
-          <p><%#= link_to flat.city.upcase, flat_path(flat) %></p>
-          <h2><%= link_to flat.title, flat %></h2>
-
-          <% flat.average_rating.times do %>
-          <i class="fas fa-star"></i>
-          <% end %> <%if flat.sum_rating == 0 %>
-          <p><em>No ratings yet</em></p>
-          <% else%> <%=  flat.sum_rating  %>
-          <% end  %>
-          <p><%= link_to " Delete 🗑", flat_path(flat), method: :delete, data: { confirm: 'are you sure?'}  %> | <%= link_to "  Edit 🖊" , edit_flat_path(flat) %> </p>
-        </div>
-      </div>
-    </div>
-  </div>
-    <% end %>
-
+    <%= link_to flat_path(flat) do %>
+    <div class="row d-inline">
+      <div class="card-flat-dashboard my-4">
+        <%= cl_image_tag flat.photo, class: "card-flat-dashboard-img" %>
+        <div class="card-flat-dashboard-infos">
+          <div id="card-dashboard-rating">
+           <!--  <p><%#= link_to flat.city.upcase, flat_path(flat) %></p> -->
+           <h2><%#= link_to flat.title, flat %></h2>
+           <h2><%= flat.title %></h2>
+           <%#= raise %>
+           <% flat.average_rating.times do %>
+           <i class="fas fa-star"></i>
+           <% end %> <%if flat.sum_rating == 0 %>
+           <p><em>No ratings yet</em></p>
+           <% else%> <%=  flat.sum_rating  %>
+           <% end  %>
+           <p><%= link_to " Delete ", flat_path(flat), method: :delete, data: { confirm: 'are you sure?'}  %> | <%= link_to "  Edit " , edit_flat_path(flat) %> </p>
+         </div>
+       </div>
+     </div>
+   </div>
+   <% end %>
+ </div>
+ <% end %>
 </div>
-
