@@ -20,9 +20,9 @@
           </div>
           <h2 class="card-trip-pricing"><%= @flat.price_per_night %> €</h2>
         </div>
-        <div class="btn btn-book">
+        <div >
           <% if @flat.user == current_user %>
-          <%= link_to "Edit this flat", edit_flat_path(@flat) %>
+          <span class="btn btn-book"><%= link_to "Edit this flat", edit_flat_path(@flat) %></span>
           <% end %>
         </div>
       </div>
