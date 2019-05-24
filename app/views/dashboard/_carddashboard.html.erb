@@ -1,13 +1,10 @@
-
-
 <div class="row">
-    <% @user.flats.each do |flat| %>
+  <% @user.flats.each do |flat| %>
   <div class="col-md-4">
     <div class="card-flat-dashboard m-2">
       <%= cl_image_tag flat.photo %>
       <div class="card-flat-dashboard-infos">
         <div id="card-dashboard-rating">
-          <p><%#= link_to flat.city.upcase, flat_path(flat) %></p>
           <h2><%= link_to flat.title, flat %></h2>
 
           <% flat.average_rating.times do %>
@@ -21,7 +18,7 @@
       </div>
     </div>
   </div>
-    <% end %>
+  <% end %>
 
 </div>
 

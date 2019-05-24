@@ -4,7 +4,7 @@
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 325px;
+  height: 260px;
   transform: scale(1);
   transition: transform 150ms linear;
 }
@@ -18,7 +18,7 @@
   color: black;
 }
 
-.card-flat-dashboard > a > img {
+.card-flat-dashboard  > img {
   height: 150px !important;
   width: 100%;
   object-fit: cover;
