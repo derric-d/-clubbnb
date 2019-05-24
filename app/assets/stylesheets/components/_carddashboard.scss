@@ -5,14 +5,21 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   height: 250px;
+  transform: scale(1);
+  transition: transform 150ms linear;
+}
+
+.card-flat-dashboard:hover {
+  transform: scale(1.05);
+  transition: transform 150ms linear;
 }
 
 .card-flat-dashboard a {
   color: black;
 }
 
-.card-flat-dashboard > img {
-  height: 150px;
+.card-flat-dashboard > a > img {
+  height: 150px !important;
   width: 100%;
   object-fit: cover;
   border-top-left-radius: 15px;
@@ -33,20 +40,20 @@
 }
 
 
-.card-flat-dashboard .card-flat-dashboard-infos {
+.card-flat-dashboard-infos {
   padding: 16px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: flex-end;
   position: relative;
 }
 
-.card-flat .card-flat-dasboard-infos i {
+.card-flat-dasboard-infos i {
   color: #710627;
   font-size: 10px;
 }
 
-.card-flat .card-flat-dashboard-infos p {
+.card-flat-dashboard-infos p {
   font-size: 12px;
 }
 

@@ -21,11 +21,10 @@
 
       </div>
 
-<div class="btn btn-book">
+    <div>
       <% if @flat.user == current_user %>
-        <%= link_to "Edit this flat", edit_flat_path(@flat) %>
+        <span class="btn btn-book"><%= link_to "Edit this flat", edit_flat_path(@flat) %></span>
       <% end %>
-
     </div>
 
 
