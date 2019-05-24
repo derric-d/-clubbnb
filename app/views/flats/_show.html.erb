@@ -1,0 +1,28 @@
+<div class="card-trip p-4 ml-4 col-md-6">
+  <%= cl_image_tag @flat.photo %>
+  <div class="card-trip-infos">
+    <h2><%= @flat.title %></h2>
+    <p><%= @flat.description %></p>
+    <%= link_to "See Reviews", flat_reviews_path(@flat, @review), class: "btn ", id: "couple" %>
+    <% @flat.average_rating.times do %>
+    <i class="fas fa-star"></i>
+    <% end %> <%if @flat.sum_rating == 0 %>
+    <p><em>No ratings yet</em></p>
+    <% else%> <%=  @flat.sum_rating  %>
+    <% end  %>
+    <br>
+  </div>
+  <h2 class="card-trip-pricing"><%= @flat.price_per_night %> €</h2>
+
+  <div class="btn btn-book">
+    <% if @flat.user == current_user %>
+      <%= link_to "Edit this flat", edit_flat_path(@flat) %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
