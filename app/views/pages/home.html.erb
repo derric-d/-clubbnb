@@ -2,10 +2,11 @@
 <div class="list-margin">
   <body class="bg-img">
     <!-- <div class="row"> -->
-      <!-- <div class="col-md-4"> -->
+      <div class="col-md-4">
         <div style="display: flex;align-items: center;justify-content: space-around; height: 100%; width: 100%">
           <div class="box" style="width: 100%">
             <h1>Made to stay.</h1>
+            <p>We imagine a world where you can belong anywhere. Find beautiful apartments around the world. Be free. And go anywhere.</p>
 
             <%= form_tag flats_path, method: :get do %>
               <%= text_field_tag :query,
@@ -13,13 +14,11 @@
                 class: "form-control",
                 placeholder: "Find a Flat"
               %>
-              <%= submit_tag("Search", id:"button", style:"margin-top: 10px") %>
+              <%= submit_tag("Search", id:"button", style:"margin-top: 20px") %>
             <% end %>
-            <!-- <p>You can't search for anything yet.<br>But if you click on button, it will show you all flats.</p> <br> -->
-          <!--           <span id="button"><%#= link_to "Click me", flats_path %></span>
-           -->    </div>
+             </div>
         </div>
-      <!-- </div> -->
+      </div>
     <!-- </div> -->
   </body>
 </div>
