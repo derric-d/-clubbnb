@@ -25,11 +25,13 @@
   background-color: white;
   height: 60vh;
   padding-top: 2px;
+  flex-shrink: 0;
   // box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .nav.flex-column.nav-pills {
-  width: 20%
+  width: 20%;
+  margin-bottom: 100px;
 }
 
 .nav-pills .nav-link.active,
@@ -56,5 +58,6 @@
   // background-image: url("https://ui-ex.com/images/texas-drawing-skyline-2.png");
   // background-image: url("https://www.pinclipart.com/picdir/middle/109-1092788_toronto-skyline-silhouette-transparent-toronto-skyline-black-and.png");
   background-repeat: no-repeat;
-
 }
+
+

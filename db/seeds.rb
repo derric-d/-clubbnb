@@ -103,7 +103,98 @@ flats_attributes = [
   price_per_night: 120,
   remote_photo_url: 'https://a0.muscache.com/im/pictures/a73ba2f3-4776-46f2-9b38-4fee0962d0bb.jpg?aki_policy=xx_large',
   user_id: User.all.sample.id
-}
+},
+
+{
+  title: 'Villa San Gennariello B&B',
+  city: 'Portici',
+  address: 'Via Antonio de Curtis 80055',
+  description: "Bed and breakfast in splendid Vesuviana's Villa of 1700. It was the Royal Bourbon Pheasantry, part of the Royal Palace of Portici.",
+  price_per_night: 60,
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/904359/182b801f_original.jpg?aki_policy=xx_large',
+  user_id: User.all.sample.id
+},
+
+{
+  title: 'Luxurious stone villa in Crete',
+  city: 'Chania',
+  address: 'Chania 731 35,',
+  description: 'Very luxurious villa carved out of a big stone.',
+  price_per_night: 75,
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/135650b5-2541-4b48-878c-77044f6d399c.jpg?aki_policy=xx_large',
+  user_id: User.all.sample.id
+},
+
+{
+  title: 'The World Famous Seashell House',
+  city: 'Isla Mujeres',
+  address: 'Isla Mujeres 77400',
+  description: 'Great location to stay at if you want to feel like a snail!',
+  price_per_night: 220,
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/6722906/b4bc6418_original.jpg?aki_policy=xx_large',
+  user_id: User.all.sample.id
+},
+
+{
+  title: 'Romantic flat with stunning views',
+  city: 'Fornalutx',
+  address: 'Carrer de sa Plaça 3',
+  description: 'Perfect place for wannabe queens.',
+  price_per_night: 135,
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/28c1d7ed-268d-47cc-aa9c-436b3e9aa069.jpg?aki_policy=x_large',
+  user_id: User.all.sample.id
+},
+
+{
+  title: 'Ocean Beachfront Luxury Design Villa',
+  city: 'Dencarik',
+  address: 'Bali 81152',
+  description: 'Very very very pretty and well designed Villa with all inclusive breakfast.',
+  price_per_night: 150,
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/d120b303-77c3-484b-91dc-cfc9959877ed.jpg?aki_policy=xx_large',
+  user_id: User.all.sample.id
+},
+
+{
+  title: 'Beautiful flat with pool',
+  city: 'Marrakesch',
+  address: 'Marrakesch 40160',
+  description: 'Beautiful flat with a lot of flower petals on floor and furniture.',
+  price_per_night: 80,
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/11424118/e1fb3923_original.jpg?aki_policy=xx_large',
+  user_id: User.all.sample.id
+},
+
+{
+  title: 'Wooden hut with pool',
+  city: 'Bali',
+  address: 'Kabupaten Tabanan, Bali 82162',
+  description: 'Feel connected with the earth in this pristine hut.',
+  price_per_night: 80,
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/7cc3c855-f90e-4d0f-9b13-3b5c2a3c4bad.jpg?aki_policy=xx_large',
+  user_id: User.all.sample.id
+},
+
+{
+  title: 'Apartment for hipsters',
+  city: 'New York',
+  address: '1468 Prospect Pl,',
+  description: "If you think you're special, this is the place for you to stay at." ,
+  price_per_night: 110,
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/34212002/4a20ccc3_original.jpg?aki_policy=xx_large',
+  user_id: User.all.sample.id
+},
+
+{
+  title: 'Feel blue flat',
+  city: 'London',
+  address: '221b Baker street',
+  description: "Everything is blue.",
+  price_per_night: 30,
+  remote_photo_url: 'https://a0.muscache.com/im/pictures/5a878555-6c05-4342-b1cd-b4a4cf86726d.jpg?aki_policy=xx_large',
+  user_id: User.all.sample.id
+},
+
 ]
 
 Flat.create!(flats_attributes)
@@ -230,6 +321,96 @@ reviews_attributes = [
 {
   stars: 5,
   description: 'Thank you!!',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 4,
+  description: 'Very nice neighbours!',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 4,
+  description: 'The provided food was the best I have ever eaten!',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 4,
+  description: 'Very beautiful flat but the kitchen was quite dirty...',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 5,
+  description: 'I will come back with my family a 100%!!!',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 3,
+  description: 'Nice place to live but a too expensive.',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 1,
+  description: "The elictricity was not working for 10 days! And I didn't get back a single cent!",
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 5,
+  description: 'My kids loved everything!',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 1,
+  description: 'Went there with my lover and it was shit.',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 1,
+  description: 'The host just never showed up? We had to get into ANOTHER flat without getting a refund. I would give -100 stars!',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 5,
+  description: 'Lovely!',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 5,
+  description: 'Thumbs up from me and my dogs!',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 5,
+  description: 'I wish I could live here all year around.',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 1,
+  description: 'Hated the country, the neighborhood and all the people.',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 5,
+  description: 'Everything was perfect! 100 stars from me:)',
+  booking_id: Booking.all.sample.id,
+  flat_id: Flat.all.sample.id
+},
+{
+  stars: 3,
+  description: 'Stay was okay, but could have been better.',
   booking_id: Booking.all.sample.id,
   flat_id: Flat.all.sample.id
 }
