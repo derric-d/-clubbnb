@@ -15,9 +15,7 @@ body, html {
   // background-image: url("https://cdn.allwallpaper.in/wallpapers/2880x1800/14421/the-perfect-beach-2880x1800-wallpaper.jpg");
   background-image: url("https://s3.gifyu.com/images/MadeToStay.gif");
   /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
+  height:100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,3 +35,22 @@ body, html {
   opacity: 0.8;
 }
 
+
+#home-icons {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#home-icons p {
+  font-size: 15px;
+  text-align: justify;
+  margin: 10px 5px;
+}
+
+#home-icons img {
+  height: 55px;
+  margin-bottom: 10px;
+}

@@ -1,26 +1,48 @@
-
+  <div class="bg-img">
 <div class="list-margin">
-  <body class="bg-img">
-    <!-- <div class="row"> -->
-      <div class="col-md-4">
-        <div style="display: flex;align-items: center;justify-content: space-around; height: 100%; width: 100%">
-          <div class="box" style="width: 100%">
-            <h1>Made to stay.</h1>
-            <p>We imagine a world where you can belong anywhere. Find beautiful apartments around the world. Be free. And go anywhere.</p>
 
-            <%= form_tag flats_path, method: :get do %>
-              <%= text_field_tag :query,
-                params[:query],
-                class: "form-control",
-                placeholder: "Find a Flat"
-              %>
-              <%= submit_tag("Search", id:"button", style:"margin-top: 20px") %>
-            <% end %>
-             </div>
+  <!-- <div class="row"> -->
+    <div class="col-md-4">
+      <div style="display: flex;align-items: center;justify-content: space-around; height: 100%; width: 100%">
+        <div class="box" style="width: 100%">
+          <h1>Made to stay.</h1>
+          <p>We imagine a world where you can belong anywhere. Find beautiful apartments around the world. Be free. And go anywhere.</p>
+
+          <%= form_tag flats_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+            placeholder: "Find a Flat"
+            %>
+            <%= submit_tag("Search", id:"button", style:"margin-top: 20px") %>
+          <% end %>
         </div>
       </div>
-    <!-- </div> -->
-  </body>
+    </div>
+  </div>
 </div>
+
+<div class="list-margin">
+  <h2 style="text-align:center;">Your advantages</h4>
+    <div id="home-icons">
+      <div class="col-md-4">
+        <img src="https://i.ibb.co/Dt0KxSb/noun-house-specification-2368079.png" alt="Wide Selection">
+        <h4>Wide Selection</h4>
+        <p>Find your kind of property. Single rooms, apartments or houseboats. You name it.</p>
+      </div>
+      <div class="col-md-4">
+        <!-- <img src="https://i.ibb.co/FHBZwRy/noun-Couple-1371841.png" alt="Belong anywhere"> -->
+        <img src="https://i.ibb.co/2s8BV3j/noun-Couple-1371841.png" alt="Belong anywhere">
+        <h4>Belong anywhere</h4>
+        <p>Feel at home, anywhere you go in the world. Never worry about your stay but enjoy your time.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://i.ibb.co/ZLDv3Nq/noun-selection-1214259.png" alt="Options">
+        <h4>Free Listings</h4>
+        <p>Offer your home to other people. You don't need to pay for listing. And can set your own price.</p>
+      </div>
+
+    </div>
+  </div>
 
 

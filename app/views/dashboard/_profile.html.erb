@@ -5,18 +5,19 @@
     <table style="width:100%">
       <tr>
         <td><h4 style="text-align:left;">First Name</h4></td>
-        <td><%= current_user.first_name %></td>
+        <td style="padding-left:15px;"><%= current_user.first_name %></td>
       </tr>
       <tr>
         <td><h4 style="text-align:left;">Last Name</h4></td>
-        <td><%= current_user.last_name %></td>
+        <td style="padding-left:15px;"><%= current_user.last_name %></td>
         </tr>
         <tr>
         <td><h4 style="text-align:left;">Email</h4></td>
-        <td><%= current_user.email %></td>
+        <td style="padding-left:15px;"><%= current_user.email %></td>
         </tr>
-      </table><br>
-      <span id="button-red"><%= link_to "Edit your profile", edit_user_registration_path(@user)  %></span>
+      </table><br><br>
+      <span id="button-red"><%= link_to "Update your profile", edit_user_registration_path(@user)  %></span>
+      <br><br><br>
 
     </div>
 

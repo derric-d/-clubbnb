@@ -9,7 +9,7 @@
             <% if @user.flats.count == 0  %>
             <p>You currently don't offer any homes to stay. Do you want to become a host? <%= link_to "Click here to become a host.", new_flat_path %></p>
             <% else %>
-            <p>You currently offer <%= @user.flats.count %> flat/s. </p>
+            <p>You currently offer <%= pluralize @user.flats.size, "flat" %>. </p>
             <% end %>
           </td>
         </tr>

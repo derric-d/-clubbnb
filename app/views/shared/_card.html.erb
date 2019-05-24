@@ -6,17 +6,14 @@
       <%= cl_image_tag flat.photo %>
       <div class="card-flat-infos">
         <div id="card-rating">
-
-          <p><%#= link_to flat.city.upcase, flat_path(flat) %></p>
-
-          <!-- <h2><%= link_to flat.title, flat %></h2> -->
+          <p><%= flat.city.upcase %></p>
           <h2><%=  flat.title %> </h2>
-          <%#= raise %>
           <% flat.average_rating.times do %>
           <i class="fas fa-star"></i>
           <% end %> <%if flat.sum_rating == 0 %>
           <p><em>No ratings yet</em></p>
-          <% else%> <%=  flat.sum_rating  %>
+          <% else%>
+          <span class="rating"><%=  flat.sum_rating  %></s>
           <% end  %>
         </div>
       </div>
