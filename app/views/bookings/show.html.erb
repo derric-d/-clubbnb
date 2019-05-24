@@ -1,12 +1,17 @@
 <body  style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),  url('https://ui-ex.com/images/texas-drawing-skyline-2.png')">
 
   <div class="container">
-    <h1>Your Booking</h1>
-      <p class="move">Move-in date: <%= @booking.move_in_date %></p>
-      <p class="move">Move-out date: <%= @booking.move_out_date %></p>
+    <h1>Your Booking in <%= @flat.city %></h1>
+      <p class="move">Start date: <%= @booking.move_in_date %></p>
+      <p class="move">End date: <%= @booking.move_out_date %></p>
+      <% duration = @booking.move_out_date - @booking.move_in_date %>
+      <p class="move">Length: <%= duration.to_i %> days</p>
+      <% costs = duration.to_i * @flat.price_per_night %>
+      <p class="move">Total costs: <%= costs.to_i%> EUR</p>
 
     <div class="flexbox">
-      <%= link_to "Delete Booking", flat_booking_path(@flat, @booking), method: :delete, data: { confirm: 'are you sure' }, class: "btn ", id: "couple"  %>
+
+      <%= link_to "Delete Booking", flat_booking_path(@flat, @booking), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn ", id: "couple"  %>
       <%= link_to "See Reviews", flat_bookings_path(@flat, @booking), class: "btn ", id: "couple" %>
       <%= link_to "Write a Review", new_flat_review_path(@flat, @booking), class: "btn ", id: "couple" %>
       <%= link_to "Back", flat_path(@flat), class: "btn ", id: "couple"  %>

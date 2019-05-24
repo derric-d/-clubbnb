@@ -14,7 +14,7 @@
           <p><em>No ratings yet</em></p>
           <% else%> <%=  flat.sum_rating  %>
           <% end  %>
-          <p><%= link_to " Delete 🗑", flat_path(flat), method: :delete, data: { confirm: 'are you sure?'}  %> | <%= link_to "  Edit 🖊" , root_path %> </p>
+          <p><%= link_to " Delete 🗑", flat_path(flat), method: :delete, data: { confirm: 'are you sure?'}  %> | <%= link_to "  Edit 🖊" , edit_flat_path(flat) %> </p>
         </div>
     </div>
   </div>

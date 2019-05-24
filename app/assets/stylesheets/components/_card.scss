@@ -80,6 +80,14 @@ td {
   vertical-align: middle;
 }
 
+
 .rating {
   color:black;
+  }
+  
+a {
+  &:hover {
+    color:black;
+  }
+  color: black;
 }

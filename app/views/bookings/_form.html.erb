@@ -1,7 +1,10 @@
 <%= simple_form_for([@flat, @booking]) do |f| %>
-    <div class="row">
-      <%= f.input :move_in_date, as: :string,   input_html: { id:"start_date"} %>
-      <%= f.input :move_out_date, as: :string,  input_html: { id:"end_date"}%>
-      <%= f.submit class: "btn btn-primary", id: "  book" %>
+    <div>
+      <div class="form-inline input-form">
+        <%= f.input :move_in_date, label: 'Start', as: :string,   input_html: { id:"start_date", class: "input-fields"} %>
+        <%= f.input :move_out_date, label: 'End', as: :string,  input_html: { id:"end_date", class: "input-fields"}%>
+      </div>
+      <br>
+      <%= f.submit class: "btn-book text-alignment", id: "  book" %>
       <% end %>
 </div>
