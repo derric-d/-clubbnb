@@ -1,31 +1,33 @@
 <div class="list-margin">
-    <div class="dashboard" >
-      <h3 style="text-align:left;">Welcome back, <%= @user.first_name %>.</h3><br>
-      <p>Your activity:</p>
-      <table style="width:100%">
-        <tr>
-          <th><i class="fas fa-home"></i></th>
-          <td>
-            <% if @user.flats.count == 0  %>
-            <p>You currently don't offer any homes to stay. Do you want to become a host? <%= link_to "Click here to become a host.", new_flat_path %></p>
-            <% else %>
-            <p>You currently offer <%= pluralize @user.flats.size, "flat" %>. </p>
-            <% end %>
-          </td>
-        </tr>
-        <tr>
-          <th><i class="fas fa-suitcase"></i></th>
-          <td>
-            <% if @booking.nil?  %>
-            <p><%= link_to "Time to plan your next trip.", root_path %></p>
-            <% else %>
-            <p>Your next trip is on .</p>
-            <% end %></td>
-          </tr>
-          <tr>
-            <th><i class="fas fa-star"></i></th>
-            <td>No idea what to write.</td>
-          </tr>
-        </table>
-      </div>
-    </div>
+  <div class="dashboard" >
+    <h3 style="text-align:left;">Welcome back, <%= @user.first_name %>.</h3><br>
+    <p>Your activity:</p>
+    <table style="width:100%">
+      <tr>
+        <th><i class="fas fa-home"></i></th>
+        <td>
+          <% if @user.flats.count == 0  %>
+          <p>You currently don't offer any homes to stay. Do you want to become a host? <%= link_to "Click here to become
+          host.", new_flat_path %></p>
+          <% else %>
+          <p>You currently offer <%= pluralize @user.flats.size, "flat" %>. </p>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th><i class="fas fa-suitcase"></i></th>
+        <td>
+          <% if @booking.nil?  %>
+          <p><%= link_to "Time to plan your next trip.", root_path %></p>
+          <% else %>
+          <p>Your next trip is on .</p>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+          <th><i class="fas fa-star"></i></th>
+          <td>No idea what to write.</td>
+      </tr>
+    </table>
+  </div>
+</div>

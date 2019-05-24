@@ -16,7 +16,9 @@
         <td style="padding-left:15px;"><%= current_user.email %></td>
         </tr>
       </table><br><br>
-      <span id="button-red"><%= link_to "Update your profile", edit_user_registration_path(@user)  %></span>
+      <div>
+        <span id="button-red"><%= link_to "Update your profile", edit_user_registration_path(@user)  %></span>
+      </div>
       <br><br><br>
 
     </div>
