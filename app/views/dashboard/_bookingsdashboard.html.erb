@@ -1,0 +1,15 @@
+
+<ul>
+  <p>Your Trips planned:</p><br>
+  <% @user.bookings.each do |booking| %>
+    <% unless booking.move_in_date.nil? %>
+      <li>
+        You have booked
+        <%= booking.flat.title %> <br>
+        from <%= booking.move_in_date%> until <%= booking.move_out_date %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+
