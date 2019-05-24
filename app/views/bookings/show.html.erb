@@ -10,6 +10,7 @@
       <p class="move">Total costs: <%= costs.to_i%> EUR</p>
 
     <div class="flexbox">
+
       <%= link_to "Delete Booking", flat_booking_path(@flat, @booking), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn ", id: "couple"  %>
       <%= link_to "See Reviews", flat_bookings_path(@flat, @booking), class: "btn ", id: "couple" %>
       <%= link_to "Write a Review", new_flat_review_path(@flat, @booking), class: "btn ", id: "couple" %>

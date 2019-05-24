@@ -80,3 +80,10 @@
 td {
   vertical-align: middle;
 }
+
+a {
+  &:hover {
+    color:black;
+  }
+  color: black;
+}
