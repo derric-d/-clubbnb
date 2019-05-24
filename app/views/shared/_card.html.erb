@@ -1,22 +1,9 @@
-<!-- <div class="card-flat">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-  <div class="card-flat-infos">
-    <div>
-      <p>Berlin ****</p>
-      <h2>Nice room in PrenzlauerBerg</h2>
-      <p>Cozy, nice, blabla, placeholder.</p>
-    </div>
-    <h2 class="card-flat-pricing">99</h2>
-  </div>
-</div>
- -->
  <div class="row col-md-8">
   <% @flats.each do |flat| %>
   <div class="col-md-4">
     <%= link_to flat_path(flat) do  %>
     <div class="card-flat my-2">
       <%= cl_image_tag flat.photo %>
-<!--       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"> -->
       <div class="card-flat-infos">
         <div id="card-rating">
 
