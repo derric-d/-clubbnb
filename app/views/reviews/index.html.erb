@@ -1,13 +1,18 @@
-<ul>
-  <%# raise %>
-  <% @reviews.each do |b| %>
 
-    <li>
-      <%= b.description %>
-      <%= b.stars %>
-      <%= link_to "x", review_path(b), method: :delete, data: { confirm: 'are you sure' } %>
 
-    </li>
+<body  style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),  url('https://ui-ex.com/images/texas-drawing-skyline-2.png')">
 
-  <% end %>
-</ul>
+  <div class="container">
+    <h1>This Flat's Reviews</h1>
+      <ul>
+        <% @reviews.each do |b| %>
+          <li>
+            <%= b.description %>
+            <%= b.stars %>
+            <%= link_to "x", review_path(b), method: :delete, data: { confirm: 'are you sure' } %>
+
+          </li>
+        <% end %>
+      </ul>
+  </div>
+</body>
